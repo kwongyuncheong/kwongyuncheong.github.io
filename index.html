@@ -71,6 +71,42 @@ height:8px;
 
 }
 
+.product-area{
+
+display:flex;
+
+align-items:center;
+
+}
+
+
+.product-btn{
+
+background:#7b1e0a;
+
+color:white;
+
+border:none;
+
+font-size:30px;
+
+width:45px;
+
+height:60px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+
+.product-btn:hover{
+
+background:#d4af37;
+
+}  
+
 
 .product{
 
@@ -198,8 +234,56 @@ border:0;
 border-top:1px solid #d4af37;
 
 }
+
+.product-area{
+
+display:flex;
+
+align-items:center;
+
+}
+
+
+.product-btn{
+
+background:#7b1e0a;
+
+color:white;
+
+border:none;
+
+font-size:30px;
+
+width:45px;
+
+height:60px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+
+.product-btn:hover{
+
+background:#d4af37;
+
+}
+
+
+.products-container{
+
+flex:1;
+
+overflow-x:auto;
+
+scroll-behavior:smooth;
+
+}
+
+</style>  
   
-</style>
 
 </head>
 
@@ -248,6 +332,20 @@ With decades of experience, we continue producing traditional soy sauce with qua
 
 
 <h2>Products 產品</h2>
+
+<div class="product-area">
+
+<button class="product-btn left" onclick="scrollProducts(-300)">
+←
+</button>
+
+
+<div class="product-area">
+
+<button class="product-btn" onclick="scrollProducts(-300)">
+←
+</button>
+
 
 <div class="products-container">
   
@@ -325,7 +423,10 @@ Dark Soy Sauce
 </div>
 
 
-</div>
+<button class="product-btn right" onclick="scrollProducts(300)">
+→
+</button>
+
 
 </div>
 
@@ -405,5 +506,30 @@ All Rights Reserved
 
 </footer>
 
+</footer>
+
+
+<script>
+
+function scrollProducts(amount){
+
+document.querySelector('.products-container')
+.scrollBy({
+
+left:amount,
+
+behavior:'smooth'
+
+});
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+  
 </body>
 </html>
