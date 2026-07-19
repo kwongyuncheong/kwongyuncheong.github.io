@@ -25,7 +25,7 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:10px 40px;
+padding:8px 50px;
 
 background:#f8f3e7;
 
@@ -48,15 +48,54 @@ color:#7b1e0a;
 
 text-decoration:none;
 
-margin:0 15px;
+margin:0 18px;
 
-font-size:18px;
+font-size:17px;
+
+font-weight:bold;
+
+transition:0.3s;
 
 }
 
 nav a:hover{
+  
 color:#d4af37;
+  
 }
+
+nav a{
+
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:2px;
+
+background:#d4af37;
+
+bottom:-8px;
+
+left:0;
+
+transition:0.3s;
+
+}
+
+
+nav a:hover::after{
+
+width:100%;
+
+}  
 
 .hero{
 
