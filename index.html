@@ -306,6 +306,61 @@ h1{
 font-size:28px;
 }
 
+header{
+
+padding:10px 20px;
+
+}
+
+
+.logo{
+
+width:130px;
+
+}
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+nav{
+
+display:none;
+
+position:absolute;
+
+top:70px;
+
+left:0;
+
+width:100%;
+
+background:#f8f3e7;
+
+padding:20px 0;
+
+}
+
+
+nav a{
+
+display:block;
+
+margin:15px;
+
+}
+
+
+nav.show{
+
+display:block;
+
+}
+    
 }
 
 img{
@@ -490,6 +545,23 @@ background:#d4af37;
 }
 
 
+.menu-btn{
+
+display:none;
+
+background:none;
+
+border:none;
+
+font-size:30px;
+
+color:#7b1e0a;
+
+cursor:pointer;
+
+}
+
+
 </style>
 
 </head>
@@ -502,12 +574,20 @@ background:#d4af37;
 
 <img src="Logo-new.png" class="logo">
 
-<nav>
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+
+<nav id="menu">
+
 <a href="#home">Home</a>
 <a href="#about">About Us</a>
 <a href="#products">Products</a>
 <a href="#factory">Factory</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -726,8 +806,15 @@ behavior:'smooth'
 
 }
 
-</script>
 
+function toggleMenu(){
+
+document.getElementById("menu")
+.classList.toggle("show");
+
+}
+
+</script>
 
 </body>
 
