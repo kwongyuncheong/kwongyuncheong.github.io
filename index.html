@@ -9,28 +9,34 @@
 
 .logo{
 
-width:200px;
+width:150px;
 
 height:auto;
 
-margin:20px;
-  
-background:#f8f3e7;
+margin:0;
   
 }
+
+header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:10px 40px;
+
+background:#f8f3e7;
+
+}  
 
   
 nav{
 
-background:#7b1e0a;
+background:none;
 
-padding:15px;
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
+padding:0;
 
 }
 
@@ -420,11 +426,9 @@ background:#d4af37;
 </style>  
   
 
-</head>
+<header>
 
-<body>
-
-<img src="Logo-new.png" class="logo">
+<img src="logo.png" class="logo">
 
 <nav>
 <a href="#home">Home</a>
@@ -433,6 +437,8 @@ background:#d4af37;
 <a href="#factory">Factory</a>
 <a href="#contact">Contact</a>
 </nav>
+
+</header>
 
 
 <div class="hero" id="home">
