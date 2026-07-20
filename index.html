@@ -1112,6 +1112,14 @@ behavior:'smooth'
 
 }
 
+
+function toggleMenu(){
+
+document.getElementById("menu")
+.classList.toggle("show");
+
+}
+
 const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
@@ -1131,15 +1139,7 @@ document.querySelectorAll(".fade-in").forEach((el)=>{
 
 observer.observe(el);
 
-});
-  
-
-function toggleMenu(){
-
-document.getElementById("menu")
-.classList.toggle("show");
-
-}
+});  
 
 window.onscroll = function(){
 
