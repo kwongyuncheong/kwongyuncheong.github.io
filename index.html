@@ -778,6 +778,28 @@ cursor:pointer;
 
 }  
 
+/* Scroll Animation */
+
+.fade-in{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all 0.8s ease;
+
+}
+
+
+.fade-in.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+  
+
 </style>
 
 </head>
@@ -818,7 +840,7 @@ About Us 關於我們
 </h2>
 
 
-<div class="about-container">
+<div class="about-container fade-in">
 
 
 <div class="about-image">
@@ -852,7 +874,7 @@ Founded in the 1950s, Kwong Yun Cheong Sauce Factory has been producing traditio
 
 </div>
 
-<div class="box" id="products">
+<div class="box fade-in" id="products">
 
 
 <h2 class="section-title">
@@ -958,10 +980,10 @@ Dark Soy Sauce
 Our Factory 工廠介紹
 </h2>
 
-<img src="factory pic.jpg" class="factory-img">
+<img src="factory pic.jpg" class="factory-img fade-in">
 
   
-<h2 id="contact" class="section-title">
+<h2 id="contact" class="section-title fade-in">
 Contact 聯絡
 </h2>
 
@@ -1090,6 +1112,27 @@ behavior:'smooth'
 
 }
 
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+
+document.querySelectorAll(".fade-in").forEach((el)=>{
+
+observer.observe(el);
+
+});
+  
 
 function toggleMenu(){
 
