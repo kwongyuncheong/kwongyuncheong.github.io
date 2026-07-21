@@ -14,12 +14,88 @@
 <style>
 
 .logo{
-
 width:170px;
-
 height:auto;
+margin-left:30px;
+}
+
+header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:8px 80px;
+
+background:#f8f3e7;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
 
 }
+
+nav{
+
+background:none;
+
+padding:0;
+
+}
+
+nav a{
+
+color:#7b1e0a;
+
+text-decoration:none;
+
+margin:0 18px;
+
+font-size:17px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+nav a{
+
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:2px;
+
+background:#d4af37;
+
+bottom:-8px;
+
+left:0;
+
+transition:0.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}  
   
 body{
 
@@ -143,11 +219,17 @@ border-radius:15px;
 }
 
 a{
-
 color:#7b1e0a;
-
 text-decoration:none;
+}
 
+.footer-column a{
+color:white;
+transition:.3s;
+}
+
+.footer-column a:hover{
+color:#d4af37;
 }
 
 footer{
@@ -333,8 +415,6 @@ loading="lazy">
 
 </iframe>
 
-
-</div>
 
 <footer>
 
