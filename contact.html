@@ -202,13 +202,26 @@ box-shadow:0 4px 15px rgba(0,0,0,0.15);
 
 .contact-info{
 
-flex:1;
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+width:100%;
 
 text-align:left;
 
 }
 
+.contact-info > h3{
 
+grid-column:1 / -1;
+
+text-align:center;
+
+}
+  
 .contact-info h3{
 
 color:#7b1e0a;
@@ -367,6 +380,12 @@ border-top:1px solid #d4af37;
 
 
 @media screen and (max-width:600px){
+
+.contact-info{
+
+grid-template-columns:1fr;
+
+}  
 
 .footer-container{
 
