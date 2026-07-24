@@ -170,9 +170,10 @@ background:#7b1e0a;
 }  
   
 body{
-font-family: Arial;
+font-family:Arial;
 text-align:center;
 background:#f8f3e7;
+margin:0;
 }
 
 h1{
@@ -966,32 +967,106 @@ transform:translateY(0);
 
 }
 
-.factory-gallery{
+.process-container{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
 
 max-width:1100px;
 
 margin:40px auto;
 
+padding:0 20px;
+
 }
 
 
-.factory-img{
+.process-card{
 
-width:60%;
+background:white;
 
-height:250px;
-
-object-fit:cover;
+padding:30px 20px;
 
 border-radius:15px;
 
-margin:0 auto 35px;
+box-shadow:0 4px 15px rgba(0,0,0,0.12);
 
-display:block;
-
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
+transition:0.3s;
 
 }
+
+
+.process-card:hover{
+
+transform:translateY(-8px);
+
+border:2px solid #d4af37;
+
+}
+
+
+.icon{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+
+.process-card h3{
+
+color:#7b1e0a;
+
+font-size:20px;
+
+}
+
+
+.process-card p{
+
+color:#5b2c06;
+
+font-size:16px;
+
+line-height:1.6;
+
+}
+
+
+
+@media screen and (max-width:900px){
+
+.process-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media screen and (max-width:600px){
+
+.process-container{
+
+grid-template-columns:1fr;
+
+}
+
+}  
+
+.brewing-process{
+
+margin-top:60px;
+
+margin-bottom:60px;
+
+}
+  
 
 </style>
 
@@ -1016,7 +1091,6 @@ box-shadow:0 8px 25px rgba(0,0,0,0.15);
 <a href="#home">Home</a>
 <a href="about.html">About Us</a>
 <a href="products.html">Products</a>
-<a href="index.html#gallery">Gallery</a>
 <a href="contact.html">Contact</a>
 
 </nav>
@@ -1185,21 +1259,94 @@ View More Products 更多產品
 
 </div>
 
-<h2 id="gallery" class="section-title">
-Gallery 圖片集
+<section class="brewing-process">
+
+
+<h2 class="section-title">
+Our Brewing Process
+<br>
+我們的釀造工藝
 </h2>
 
 
-<div class="factory-gallery">
+<div class="process-container">
 
 
-<img src="gallery.JPG" class="factory-img fade-in">
+<div class="process-card">
+
+<div class="icon">
+🌱
+</div>
+
+<h3>
+Selected Soy Beans
+</h3>
+
+<p>
+精選黃豆
+</p>
+
+</div>
 
 
-<img src="gallery2.JPG" class="factory-img fade-in">
+
+<div class="commitment-card">
+
+<div class="icon">
+☀️
+</div>
+
+<h3>
+Natural Fermentation
+</h3>
+
+<p>
+天然發酵
+</p>
+
+</div>
+
+
+
+<div class="commitment-card">
+
+<div class="icon">
+🏺
+</div>
+
+<h3>
+Traditional Craftsmanship
+</h3>
+
+<p>
+傳統釀造工藝
+</p>
+
+</div>
+
+
+
+<div class="commitment-card">
+
+<div class="icon">
+🍶
+</div>
+
+<h3>
+Bottled with Care
+</h3>
+
+<p>
+細心裝瓶
+</p>
+
+</div>
 
 
 </div>
+
+
+</section>
   
 <footer>
 
