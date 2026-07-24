@@ -398,6 +398,46 @@ grid-template-columns:1fr;
 }
 
 }
+
+.gallery-container{
+
+max-width:1100px;
+
+margin:40px auto;
+
+}
+
+
+.gallery-img{
+
+width:80%;
+
+height:300px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+display:block;
+
+margin:30px auto;
+
+}
+
+
+@media screen and (max-width:600px){
+
+.gallery-img{
+
+width:95%;
+
+height:220px;
+
+}
+
+}
   
 
 </style>
@@ -511,8 +551,27 @@ and we will continue to preserve these values for generations to come.
 </div>
 
 
-</div>
+</section>
 
+
+<section class="gallery">
+
+
+<h2 class="section-title">
+Gallery 圖片集
+</h2>
+
+
+<div class="gallery-container">
+
+
+<img src="gallery.JPG" class="gallery-img">
+
+
+<img src="gallery2.JPG" class="gallery-img">
+
+
+</div>  
 
 </section>
 
