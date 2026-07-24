@@ -20,6 +20,74 @@ height:auto;
 margin-left:30px;
 }
 
+.hero-products{
+
+padding:70px 20px 50px;
+
+background:#f8f3e7;
+
+text-align:center;
+
+}
+
+.hero-products h1{
+
+font-size:60px;
+
+color:#7b1e0a;
+
+margin-bottom:15px;
+
+font-family:Georgia,serif;
+
+}
+
+.hero-products span{
+
+font-size:42px;
+
+}
+
+.gold-line{
+
+width:90px;
+
+height:4px;
+
+background:#d4af37;
+
+margin:20px auto 30px;
+
+border-radius:5px;
+
+}
+
+.hero-text{
+
+font-size:26px;
+
+font-weight:bold;
+
+color:#7b1e0a;
+
+margin-bottom:20px;
+
+}
+
+.hero-sub{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#5b2c06;
+
+}
+ 
 
 header{
 
@@ -69,6 +137,20 @@ nav a:hover{
 color:#d4af37;
 
 }
+
+nav a.active{
+
+color:#7b1e0a;
+
+}
+
+nav a.active::after{
+
+width:100%;
+
+background:#7b1e0a;
+
+} 
 
  nav a{
 
@@ -414,40 +496,37 @@ width:130px;
 
 <header>
 
-<img src="Logo-new.png" class="logo">
+    <img src="Logo-new.png" class="logo">
 
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="aboutus.html">About Us</a>
-
-<a href="products.html">Products</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
 
+<section class="hero-products">
 
-<h2 class="section-title">
+    <h1>Products <span>產品</span></h1>
 
-Products 產品
+    <div class="gold-line"></div>
 
-</h2>
+    <p class="hero-text">
+        Traditional Soy Sauce Crafted Since the 1950s
+    </p>
 
-<p class="product-intro">
+    <p class="hero-sub">
+        Our soy sauce products are traditionally brewed with carefully selected ingredients,
+        delivering authentic flavour and trusted quality.
+        <br><br>
+        我們堅持傳統釀造工藝，
+        以多年經驗製作優質醬油產品。
+    </p>
 
-Our soy sauce products are made with quality ingredients and decades of experience.
-
-<br>
-
-我們以傳統工藝製作醬油，保留多年累積的品質與風味。
-
-</p> 
+</section>
 
 
 <div class="products-container">
