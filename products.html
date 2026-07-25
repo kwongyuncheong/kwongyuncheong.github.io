@@ -28,7 +28,7 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:80px 100px;
+padding:90px 100px;
 
 background:#f8f3e7;
 
@@ -54,7 +54,9 @@ text-align:left;
 
 flex:1;
 
-text-align:center;
+text-align:right;
+
+padding-right:40px;
 
 }
 
@@ -65,12 +67,12 @@ width:100%;
 
 max-width:550px;
 
-opacity:0.15;
+opacity:0.18;
 
 filter:
 grayscale(100%)
-sepia(60%)
-contrast(80%);
+sepia(65%)
+contrast(85%);
 
 mix-blend-mode:multiply;
 
@@ -82,13 +84,15 @@ mask-image:radial-gradient(circle, black 35%, transparent 75%);
 
 .hero-products h1{
 
-font-size:60px;
+font-size:56px;
 
 color:#7b1e0a;
 
 margin-bottom:15px;
 
 font-family:Georgia,serif;
+
+letter-spacing:1px;
 
 }
 
@@ -605,14 +609,13 @@ grid-template-columns:repeat(2,1fr);
  
 @media screen and (max-width:600px){
 
- .hero-products{
+.hero-products{
+
+padding:50px 20px;
 
 flex-direction:column;
 
-padding:50px 25px;
-
 }
-
 
 .hero-products-text{
 
