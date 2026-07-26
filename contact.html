@@ -147,6 +147,111 @@ margin:10px auto;
 
 }  
 
+.hero-contact{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:70px 100px;
+
+background:
+linear-gradient(
+120deg,
+#f8f3e7,
+#f3dfaa,
+#f8f3e7
+);
+
+overflow:hidden;
+
+}
+
+
+.hero-contact-text{
+
+text-align:left;
+
+max-width:600px;
+
+z-index:2;
+
+}
+
+
+.hero-contact h1{
+
+font-size:56px;
+
+font-family:Georgia,serif;
+
+color:#7b1e0a;
+
+margin:0 0 15px;
+
+}
+
+
+.hero-contact span{
+
+font-size:42px;
+
+}
+
+
+.gold-line{
+
+width:90px;
+
+height:4px;
+
+background:#d4af37;
+
+border-radius:5px;
+
+margin:20px 0 30px;
+
+}
+
+
+.hero-contact p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#5b2c06;
+
+}
+
+
+.contact-decoration{
+
+width:350px;
+
+height:350px;
+
+
+background:
+
+radial-gradient(
+circle,
+rgba(212,175,55,.35),
+rgba(212,175,55,0)
+);
+
+
+border-radius:50%;
+
+margin-right:80px;
+
+}
+  
+
 .contact-box{
 
 background:white;
@@ -181,21 +286,21 @@ line-height:1.8;
 
 .contact-container{
 
-max-width:900px;
+max-width:1000px;
 
-margin:40px auto;
+margin:50px auto;
 
 display:flex;
 
 gap:30px;
 
-padding:30px;
+padding:35px;
 
-background:white;
+background:#fff;
 
-border-radius:15px;
+border-radius:18px;
 
-box-shadow:0 4px 15px rgba(0,0,0,0.15);
+box-shadow:0 8px 25px rgba(0,0,0,.12);
 
 }
 
@@ -280,6 +385,16 @@ color:#5b2c06;
 .contact-item{
 
 min-height:150px;
+
+} 
+
+.contact-item:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+transition:.3s;
 
 }  
 
@@ -422,6 +537,46 @@ text-align:center;
 
 }
 
+@media screen and (max-width:600px){
+
+.hero-contact{
+
+flex-direction:column;
+
+padding:50px 25px;
+
+text-align:center;
+
+}
+
+
+.hero-contact-text{
+
+text-align:center;
+
+}
+
+
+.hero-contact h1{
+
+font-size:38px;
+
+}
+
+
+.hero-contact span{
+
+font-size:30px;
+
+}
+
+
+.contact-decoration{
+
+display:none;
+
+}  
+
 }  
 
 </style>
@@ -451,10 +606,40 @@ text-align:center;
 </header>
   
 
-<h2 class="section-title">
-Contact 聯絡
-</h2>
+<section class="hero-contact">
 
+
+<div class="hero-contact-text">
+
+<h1>
+Contact <span>聯絡我們</span>
+</h1>
+
+
+<div class="gold-line"></div>
+
+
+<p>
+We are happy to hear from you.
+<br>
+Please feel free to contact us for product enquiries.
+
+<br><br>
+
+歡迎與我們聯絡，
+了解更多產品資訊。
+</p>
+
+
+</div>
+
+
+<div class="contact-decoration">
+
+</div>
+
+
+</section>
 
 <div class="contact-container">
 
@@ -526,10 +711,9 @@ Public Holiday Closed
 
 <div class="map">
 
-<h2>
+<h2 class="section-title">
 Find Us 找到我們
 </h2>
-
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.555110348496!2d101.65050327521246!3d3.2108231527699433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4637f459b1e3%3A0x17ee04be5644f159!2sKwong%20Yun%20Cheong!5e0!3m2!1sen!2smy!4v1784894291333!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
