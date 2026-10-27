@@ -101,24 +101,36 @@ width:100%;
 
 }  
 
-.hero{
 
-background:
-linear-gradient(
-rgba(0,0,0,0.15),
-rgba(0,0,0,0.15)
-),
-url("homepagehero.png");
+.hero {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.15)
+        ),
+        url("homepagehero.png");
 
-background-size:cover;
-
-background-position:center 45%;
-
-height:420px;
-
-margin-bottom:30px;
-
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 420px;
+    margin-bottom: 30px;
 }
+
+@media screen and (min-width: 601px) {
+    .hero {
+        height: 520px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        background-size: cover;
+        background-position: center 45%;
+        height: 420px;
+    }
+}
+
 
 
 .hero img{
