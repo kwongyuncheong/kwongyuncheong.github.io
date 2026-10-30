@@ -818,6 +818,26 @@ transition:.3s;
 transform:scale(1.05);
 
 }
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    transition: .3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.08);
+}
+    
   
 
 .product-btn{
@@ -1611,20 +1631,35 @@ Closed
 
 <p>
 
-<a href="https://shopee.com.my/debbiefong" target="_blank">
 
-<img src="shopeelogo.png" class="shopee-logo" alt="Shopee">
+<div class="footer-column">
 
-</a>
+<h3>Follow Us</h3>
 
-</p>
+<div class="social-icons">
 
+    <!-- Shopee -->
+    <a href="https://shopee.com.my/debbiefong"
+       target="_blank"
+       rel="noopener noreferrer">
+        <img src="shopeelogo.png"
+             class="social-logo"
+             alt="Shopee">
+    </a>
 
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1CkVznU9od/?mibextid=wwXIfr"
+       target="_blank"
+       rel="noopener noreferrer">
+        <img src="fb.png"
+             class="social-logo"
+             alt="Facebook">
+    </a>
 
 </div>
 
-
 </div>
+
 
 
 <hr>
