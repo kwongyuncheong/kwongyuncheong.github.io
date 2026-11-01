@@ -324,17 +324,24 @@ font-size:28px;
 
 }
 
-.footer-container{
 
-flex-direction:column;
-
+.footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
 }
 
-.footer-column{
-
-text-align:center;
-
+.footer-column {
+    text-align: left;
 }
+
+.social-column {
+    text-align: center;
+}
+
+.social-icons {
+    justify-content: center;
+}
+
 
 header{
 
