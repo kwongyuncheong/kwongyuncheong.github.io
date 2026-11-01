@@ -421,6 +421,80 @@ text-align:left;
 }  
 
 }
+
+/* Footer layout - match index.html */
+footer .footer-container {
+    display: grid !important;
+    grid-template-columns: 1.3fr 1.2fr 1fr 1fr !important;
+    gap: 24px !important;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+footer .footer-column {
+    min-width: 0;
+    flex: initial;
+    text-align: left;
+}
+
+footer .footer-column p {
+    overflow-wrap: anywhere;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    transition: 0.3s;
+}
+
+footer .social-logo:hover {
+    transform: scale(1.08);
+}
+
+/* Mobile Footer */
+@media screen and (max-width: 600px) {
+    footer .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 24px 16px !important;
+    }
+
+    footer .footer-column {
+        text-align: left;
+    }
+
+    footer .social-column {
+        text-align: left;
+    }
+
+    footer .social-icons {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    footer .social-logo {
+        width: 36px;
+        height: 36px;
+    }
+}
   
 
 </style>
@@ -572,103 +646,71 @@ Gallery
 
 </section>
 
-  <footer>
+ 
+<footer>
+    <div class="footer-container">
 
+        <!-- Address -->
+        <div class="footer-column">
+            <h3>Address</h3>
+            <p>
+                4322, 6 1/2 miles,
+                <br>
+                West Industrial Area,
+                <br>
+                Kepong, 52000 Kuala Lumpur
+            </p>
+        </div>
 
-<div class="footer-container">
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Tel: 03-62580629</p>
+            <p>Email:<br>kwongyuncheong@outlook.com</p>
+        </div>
 
+        <!-- Business Hours -->
+        <div class="footer-column">
+            <h3>Business Hours</h3>
+            <p>Monday - Friday<br>8:00 AM - 3:00 PM</p>
+            <p>Public Holiday<br>Closed</p>
+        </div>
 
-<div class="footer-column">
+        <!-- Follow Us -->
+        <div class="footer-column social-column">
+            <h3>Follow Us</h3>
 
-<h3>
-Address
-</h3>
+            <div class="social-icons">
 
-<p>
-4322, 6 1/2 miles,
-<br>
-West Industrial Area,
-<br>
-Kepong, 52000 Kuala Lumpur
-</p>
+                <a href="https://shopee.com.my/debbiefong"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="shopeelogo.png"
+                         class="social-logo"
+                         alt="Shopee">
+                </a>
 
-</div>
+                <a href="https://www.facebook.com/share/1CkVznU9od/?mibextid=wwXIfr"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="fb.png"
+                         class="social-logo"
+                         alt="Facebook">
+                </a>
 
+            </div>
+        </div>
 
+    </div>
 
-<div class="footer-column">
+    <hr>
 
-<h3>
-Contact
-</h3>
-
-<p>
-Tel: 03-62580629
-</p>
-
-<p>
-Email:
-<br>
-kwongyuncheong@outlook.com
-</p>
-
-</div>
-
-
-
-<div class="footer-column">
-
-<h3>
-Business Hours
-</h3>
-
-<p>
-Monday - Friday
-<br>
-8:00 AM - 3:00 PM
-</p>
-
-<p>
-Public Holiday
-<br>
-Closed
-</p>
-
-</div>
-
-
-
-<div class="footer-column">
-
-<h3>Follow Us</h3>
-
-<p>
-
-<a href="https://shopee.com.my/debbiefong" target="_blank">
-
-<img src="shopeelogo.png" class="shopee-logo" alt="Shopee">
-
-</a>
-
-</p>
-
-</div>
-
-</div>
-
-
-<hr>
-
-
-<p>
-© 2026 Kwong Yun Cheong (000239508-U)
-<br>
-All Rights Reserved
-</p>
-
-
+    <p class="copyright">
+        © 2026 Kwong Yun Cheong (000239508-U)
+        <br>
+        All Rights Reserved
+    </p>
 </footer>
-
 
 </body>
 
