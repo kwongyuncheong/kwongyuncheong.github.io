@@ -792,6 +792,65 @@ footer .social-column .social-logo:hover {
     }
 }
 
+/* Product Image Click to Enlarge */
+
+.product img {
+    cursor: zoom-in;
+}
+
+/* Dark overlay */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+/* Enlarged image */
+
+.image-modal img {
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain;
+    background: #f8f3e7;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+
+.image-modal .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+/* Mobile */
+
+@media screen and (max-width:600px) {
+    .image-modal img {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .image-modal .close-btn {
+        top: 15px;
+        right: 20px;
+    }
+} 
  
 </style>
 
@@ -1327,7 +1386,66 @@ Sos Manis 3kg
     </p>
 </footer>
 
+<!-- Product Image Modal -->
 
+<div class="image-modal" id="imageModal">
+
+    <span class="close-btn" onclick="closeImage()">
+        &times;
+    </span>
+
+    <img id="enlargedImage" src="" alt="Enlarged Product">
+
+</div>
+
+ <script>
+
+const modal = document.getElementById("imageModal");
+const enlargedImage = document.getElementById("enlargedImage");
+
+// Click product image to enlarge
+
+document.querySelectorAll(".product img").forEach(img => {
+
+    img.addEventListener("click", function() {
+
+        enlargedImage.src = this.src;
+
+        modal.classList.add("show");
+
+    });
+
+});
+
+// Close modal
+
+function closeImage() {
+
+    modal.classList.remove("show");
+
+}
+
+// Click outside image to close
+
+modal.addEventListener("click", function(e) {
+
+    if (e.target === modal) {
+        closeImage();
+    }
+
+});
+
+// Press ESC to close
+
+document.addEventListener("keydown", function(e) {
+
+    if (e.key === "Escape") {
+        closeImage();
+    }
+
+});
+
+</script>
 
 </body>
 
