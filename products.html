@@ -853,6 +853,151 @@ footer .social-column .social-logo:hover {
         right: 20px;
     }
 } 
+
+
+/* =================================
+   Products Page - Mobile Adjustment
+   ================================= */
+
+@media screen and (max-width:600px) {
+
+    /* Header */
+
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 110px;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Hero Section */
+
+    .hero-products {
+        flex-direction: column;
+        padding: 30px 22px;
+        gap: 15px;
+    }
+
+    .hero-products-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hero-products h1 {
+        font-size: 30px;
+        white-space: normal;
+    }
+
+    .hero-products span {
+        font-size: 25px;
+    }
+
+    .hero-sub {
+        font-size: 15px;
+        line-height: 1.8;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-products-image {
+        display: none;
+    }
+
+    /* Product Grid */
+
+    .products-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .product {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .product img {
+        height: 145px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .product p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .category-banner {
+        padding: 12px 10px;
+        margin-top: 20px;
+    }
+
+    .category-text h2 {
+        font-size: 22px;
+    }
+
+    .category-text p {
+        font-size: 15px;
+    }
+
+    .category-banner.bulk-banner .category-text h2 {
+        font-size: 19px;
+    }
+
+    .category-banner.bulk-banner .category-text p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 28px 15px;
+    }
+
+    footer .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px 14px !important;
+    }
+
+    footer .footer-column h3 {
+        font-size: 14px;
+    }
+
+    footer .footer-column p {
+        font-size: 12px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    footer .social-column .social-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    footer .copyright {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+}
+
  
 </style>
 
